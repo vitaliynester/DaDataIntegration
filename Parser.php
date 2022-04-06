@@ -50,16 +50,9 @@ class Parser
     {
         try {
             $inputFileName = $this->path;
-
             $inputFileType = IOFactory::identify($inputFileName);
-
-            /**  Create a new Reader of the type that has been identified  **/
             $reader = IOFactory::createReader($inputFileType);
-
-            /**  Load $inputFileName to a Spreadsheet Object  **/
             $spreadsheet = $reader->load($inputFileName);
-
-            /**  Convert Spreadsheet Object to an Array for ease of use  **/
             return $spreadsheet->getActiveSheet()->toArray();
         } catch (Exception $e) {
             return [];
