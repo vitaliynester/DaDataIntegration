@@ -1,6 +1,7 @@
 {
     "require": {
         "phpoffice/phpspreadsheet": "^1.22",
-        "hflabs/dadata": "^22.3"
+        "hflabs/dadata": "^22.3",
+        "ext-curl": "^8.0"
     }
 }
